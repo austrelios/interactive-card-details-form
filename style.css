@@ -1,0 +1,370 @@
+:root {
+
+
+    font-family: 'Space Grotesk', sans-serif;
+
+/* ## Layout */
+--mobile: 375px;
+--desktop: 1440px;
+
+
+/* ## Colors
+
+### Primary */
+
+/* - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%) */
+
+/* ### Input Errors */
+--red : hsl(0, 100%, 66%);
+
+
+/* ### Neutral */
+--white: hsl(0, 0%, 100%);
+--light_grayish_violet: hsl(270, 3%, 87%);
+--dark_grayish_violet: hsl(279, 6%, 55%);
+--very_dark_violet: hsl(278, 68%, 11%);
+
+--background_color: #e7f7fc;
+
+}
+
+body {
+    background-color: var(--dark_grayish_violet);
+    font-size: x-small;
+    color: var(--dark_grayish_violet);
+}
+
+label, input {
+    margin-left: 10rem;
+}
+
+small {
+    margin-left: 10rem;
+}
+
+label, p {
+    text-transform: uppercase;
+    color: var(--very_dark_violet);
+    margin-bottom: 0
+}
+
+input {
+    padding: .3rem;
+    font-size: xx-small;
+    display: block;
+}
+
+small {
+    color: var(--red);
+}
+
+
+.main_container {
+    width: 45rem;
+    height: 20rem;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.left_container {
+    width: 30%;
+    background-image: url("./images/bg-main-desktop.png");
+}
+
+.right_container {
+    background-color: var(--white);
+    width: 70%;
+    padding-top: 2rem;
+
+}
+
+.thank_you_container {
+    position:relative;
+    background-color: var(--white);
+    margin-left: -33.7rem;
+    display: block;
+    z-index: -1;
+    padding-top: 6.5rem;
+    width: 75%;
+    visibility: hidden;
+}
+
+#icon_complete {
+    height: 2rem;
+    margin-left: 17rem;
+}
+
+h1 {
+    font-weight: lighter;
+    margin-left: 3rem;
+    width: fit-content;
+    margin-left: 15rem;
+}
+h2 {
+    font-size: smaller;
+    font-weight: lighter;
+    margin-left: 14.3rem;
+    width: fit-content;
+}
+
+#continue_button {
+    width: 11rem;
+    background-color: var(--very_dark_violet);
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+    color: var(--light_grayish_violet);
+    border: 0px;
+    margin-top: 1rem;
+    margin-left: 12.5rem;
+}
+
+#continue_button:hover {
+    background-color: var(--light_grayish_violet);
+    color: var(--very_dark_violet);
+}
+
+.card_front_container {
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+}
+
+#img_card_logo {
+    position: relative;
+    height: 1rem;
+    top: -10.5rem;
+    left: 0.5rem;
+}
+
+#card_number {
+    color: var(--light_grayish_violet);
+    font-size: small;
+    position: relative;
+    top: -11.3rem;
+    left: 0.5rem;
+    width: fit-content;
+}
+
+#holder_name {
+    color: var(--light_grayish_violet);
+    font-size: xx-small;
+    position: relative;
+    top: -8.5rem;
+    left: 0.5rem;
+    width: fit-content;
+}
+
+#cvc {
+    font-size: xx-small;
+    position: relative;
+    top: -7.0rem;
+    left: 9.3rem;
+    width: fit-content;
+}
+
+#img_card_front {
+    width: 10rem;
+}
+
+.card_back_container {
+    position: absolute;
+    top: 11.5rem;
+    left: 4rem;
+}
+
+#img_card_back {
+    width: 10rem;
+}
+
+.card_holder_details {
+    display: block;
+    padding-top: 3rem;
+}
+
+#input_holder_name, #input_card_number {
+    width: 10rem;
+}
+
+.input_holder_container, .card_number_container {
+    margin-bottom: 0rem;
+}
+
+.expiry_and_cvc_container {
+    display: flex;
+    align-items: end;
+
+}
+
+.expiry_date_container {
+    display: block;
+    margin-left: 3.6rem;
+}
+
+.expiry_date_container p {
+    margin-left: 6.4rem;
+}
+
+.month_year_container {
+    display: flex;
+}
+#input_expiry_month, #input_expiry_year {
+    width: 1.85rem;
+}
+
+#input_expiry_month {
+    margin-left: 6.4rem;
+}
+
+#input_expiry_year {
+    margin-left: 1.1rem;
+}
+
+#error_month_year {
+    margin-left: 6.5rem;
+}
+
+#error_cvc {
+    margin-left: .7rem;
+}
+
+#input_cvc {
+    margin-left: .7rem;
+    width: 2.8rem;
+    height: .6rem;
+}
+
+.cvc_container {
+    display: block;
+}
+
+#input_cvc_title {
+    margin-left: .8rem;
+}
+
+#confirm_button {
+    width: 10.9rem;
+    background-color: var(--very_dark_violet);
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+    color: var(--light_grayish_violet);
+    border: 0px;
+    margin-top: 1rem;
+}
+
+#confirm_button:hover {
+    background-color: var(--light_grayish_violet);
+    color: var(--very_dark_violet);
+}
+
+@media only screen and (max-width: 846px) {
+    .main_container {
+        display: block;
+        width: 25rem;
+    }   
+
+    label, input {
+        margin-left: 6.4rem;
+    }
+
+    small {
+        margin-left: 6.4rem;
+    }
+
+    
+    .left_container {
+        width: 100%;
+        height:10rem;
+        background-image: url("./images/bg-main-desktop.png");
+    }
+    
+    .right_container {
+        background-color: var(--white);
+        width: 100%;
+        /* padding-top: 2rem; */
+    }   
+
+    .card_front_container {
+        top: 5.2rem;
+        z-index: inherit;
+        left: 4rem;
+    }
+    .card_back_container {
+        top: 1rem;
+    }
+
+    #img_card_logo {
+        position: relative;
+        z-index: 2;
+        height: 1rem;
+        top: .5rem;
+        left: .7rem;
+    }
+    
+
+    #card_number {
+        position: fixed;
+        top: 7.2rem;
+        left: 5rem;
+        z-index: 1;
+    }
+    
+    #holder_name {
+        position: fixed;
+        top: 9rem;
+        left: 5rem;
+        z-index: 1;
+    }
+    
+    #cvc {
+        position: fixed;
+        top: 3.35rem;
+        left: 14.2rem;
+        z-index: 1;
+    }
+
+    .card_holder_details {
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+    }
+
+    .expiry_date_container {
+        margin-left: 0rem;
+    }
+    
+    .expiry_date_container p {
+        margin-left: 6.4rem;
+    }
+
+    
+    #confirm_button {
+        margin-bottom: 2rem;
+    }
+
+    .thank_you_container {
+        width: 100%;
+        top: -17rem;
+        margin-left: 0;
+        padding-top: 2rem;
+        padding-bottom: 6.5rem;
+    }
+
+    #icon_complete {
+        margin-left: 11rem;
+    }    
+    h1 {
+        margin-left: 8.6rem;
+    }
+    h2 {
+        margin-left: 8rem;
+    }
+
+    #continue_button {
+        margin-top: 1rem;
+        margin-left: 6.4rem;   
+    }
+
+    
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="main_container">
+
+    <div class="left_container">
+
+    </div>
+    <div class="card_front_container">
+      <img id="img_card_front" src="./images/bg-card-front.png" alt="card-front">
+    </div>
+    <div class="card_back_container">
+      <img id="img_card_logo" src="./images/card-logo.svg" alt="card-logo">
+      <img id="img_card_back" src="./images/bg-card-back.png" alt="card-back">
+      <p id="holder_name"></p>
+      <p id="card_number"></p>
+      <p id="cvc"></p>
+    </div>
+
+    <div class="right_container">
+
+      <div class="card_holder_details">
+        <div class="input_holder_container">
+          <label for="input_holder_name">Cardholder Name</label>
+          <input type="text" id="input_holder_name" name="input_holder_name" placeholder="eg Jane Appleseed">
+          <small id="error_holder_name"> </small>
+        </div>
+        <div class="card_number_container">
+          <label for="input_card_number">Card Number</label>
+          <input type="text" id="input_card_number" name="input_card_number" placeholder="eg 1234 5678 9123 0000">
+          <small id="error_card_number"> </small>
+        </div>
+        <div class="expiry_and_cvc_container">
+          <div class="expiry_date_container">
+            <p>Exp. Date (mm/yyyy)</p>
+            <div class="month_year_container">
+              <input type="number" id="input_expiry_month" name="input_expiry_month" min="1" max="12" placeholder="MM">
+              <input type="number" id="input_expiry_year" name="input_expiry_year" min="23" max="30" placeholder="YY">
+            </div>
+            <small id="error_month_year"> </small>
+          </div>
+          <div class="ccv_container">
+            <label id="input_cvc_title" for="input_cvc">CVC</label>
+            <input type="text" id="input_cvc" name="input_cvc" placeholder="eg 123">
+            <small id="error_cvc"> </small>
+          </div>
+        </div>
+
+        <input id="confirm_button" type="button" onclick = "validate_Card_Details()" value="Confirm">
+
+      </div>
+    </div>
+    <div class="thank_you_container">
+      <img id="icon_complete" src="./images/icon-complete.svg" alt="icon-complete">
+      <h1>Thank You!</h1>
+      <h2>We've added your card details</h2>
+      <input id="continue_button" type="button" onclick = "hide_Thank_You_Container ()" value="Continue">
+
+    </div>
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
